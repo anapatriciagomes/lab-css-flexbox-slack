@@ -8,3 +8,380 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+
+/* HTML font size configuration for rem */
+
+html {
+  font-size: 10px;
+}
+
+/* body font family */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav bar and header background */
+
+nav,
+header {
+  background-color: #540b51;
+}
+
+/* NAV BAR */
+
+nav {
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav-bar-icons button {
+  color: white;
+  background-color: #540b51;
+  border: none;
+}
+
+.flex-nav-bar {
+  display: flex;
+  border: none;
+}
+
+.flex-nav-bar img {
+  height: 30px;
+}
+
+/* HEADER */
+
+/* h1 title */
+
+header h1 {
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  background-color: #540b51;
+  border: none;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+/* Header description */
+
+.yellow-text {
+  color: #ecb12f;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.intro p {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Sign up buttons */
+
+.sign-up-buttons {
+  display: flex;
+  flex-direction: column;
+  background-color: #540b51;
+  margin: 20px 0;
+}
+
+.sign-up-buttons button {
+  margin: 5px 10px;
+}
+
+/* Email sign in button */
+
+.email-button {
+  padding: 20px;
+  height: 60px;
+  color: #540b51;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: solid white 0px;
+  border-radius: 5px;
+}
+
+/* Google button */
+
+.google-button {
+  height: 60px;
+  display: grid;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #4285f4;
+  border: solid #4285f4 0px;
+  border-radius: 5px;
+}
+
+/* Google logo icon */
+
+.google-button img {
+  grid-row: 1;
+  grid-column: 1/3;
+  background-color: white;
+  border: solid white 0px;
+  border-radius: 5px;
+  height: 15px;
+  padding: 15px;
+}
+
+/* Google sign in text */
+
+.google-button span {
+  grid-row: 1;
+  grid-column: 2/3;
+  text-align: left;
+  padding: 15px 0;
+}
+
+/* App preview image */
+
+.app-preview-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-preview-image img {
+  height: 670px;
+}
+
+/* TRUSTED COMPANIES SECTION */
+
+.trusted-companies {
+  padding: 40px;
+  background-color: #f3eae2;
+}
+
+/* Trusted companies intro */
+
+.trusted-companies p {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Trusted companies logos */
+
+.flex-companies-logos {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-companies-logos img {
+  height: 50px;
+  padding: 20px 10px;
+}
+
+/* TEAM , HOW TO WORK AND MOVE FASTER SECTIONS */
+
+.features-sections {
+  background-color: #f3eae2;
+  padding: 20px 0 35px;
+}
+
+/* Section h2 title */
+
+.features-sections h2 {
+  font-size: 3.5rem;
+  padding: 0 20px;
+}
+
+/* Section description */
+
+.features-sections p {
+  padding: 5px 20px;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Section link */
+
+.features-sections a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #2e71a6;
+}
+
+.features-sections a::after {
+  content: '\2192';
+}
+
+/* Left aligned image */
+
+.left-image {
+  text-align: left;
+}
+
+.left-image img {
+  width: 95%;
+}
+
+/* Right aligned images */
+
+.right-image {
+  text-align: right;
+  margin-right: 0;
+}
+
+.right-image img {
+  width: 95%;
+}
+
+/* TEAMS RELY ON SLACK SECTION */
+
+.teams-rely-on-slack {
+  padding: 20px 20px 35px;
+}
+
+/* section h3 title */
+
+.teams-rely-on-slack h3 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+/* Description paragraph */
+
+.teams-rely-on-slack-description {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Section buttons */
+
+.teams-rely-on-slack-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 80px;
+}
+
+.teams-rely-on-slack-buttons button {
+  margin: 5px 10px;
+}
+
+.meet-slack-button {
+  padding: 18px;
+  height: 60px;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #540b51;
+  border: solid #540b51 2px;
+  border-radius: 5px;
+}
+
+.talk-sales-button {
+  padding: 18px;
+  height: 60px;
+  color: #540b51;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: solid #540b51 2px;
+  border-radius: 5px;
+}
+
+/* Section Percentages and Descriptions */
+
+.teams-rely-on-slack ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.teams-rely-on-slack ul span {
+  color: #540b51;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.percentage-description {
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 30% 40px;
+}
+
+/* Section disclaimer */
+
+.disclaimer {
+  font-size: 1.6rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.disclaimer span::after {
+  content: '\00B1';
+}
+
+/* WELCOME SECTION */
+
+.welcome {
+  background-color: #540b51;
+  padding: 20px;
+}
+
+/* section h3 title */
+
+.welcome h3 {
+  font-size: 3.2rem;
+  color: white;
+  text-align: center;
+}
+
+/* Section buttons */
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.welcome button {
+  margin: 10px 10px;
+}
+
+.talk-to-sales-button {
+  padding: 18px;
+  height: 60px;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #540b51;
+  border: solid white 2px;
+  border-radius: 5px;
+}
+
+.try-for-free-button {
+  padding: 18px;
+  height: 60px;
+  color: #540b51;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: solid #540b51 2px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .flex-nav-bar ul {
+    display: none;
+  }
+}
