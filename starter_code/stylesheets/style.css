@@ -21,6 +21,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Nav and Header Purple background to avoid line between those sections */
+
+.purple-background {
+  background-color: #540b51;
+}
+
 /* Nav bar and header background */
 
 nav,
@@ -34,7 +40,11 @@ nav {
   display: flex;
   border: none;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 40px;
+}
+
+.nav-bar-icons {
+  align-self: center;
 }
 
 .nav-bar-icons button {
@@ -45,11 +55,16 @@ nav {
 
 .flex-nav-bar {
   display: flex;
+  align-items: center;
   border: none;
 }
 
 .flex-nav-bar img {
   height: 30px;
+}
+
+.nav-hidden-list {
+  font-size: 1.8rem;
 }
 
 /* HEADER */
@@ -91,16 +106,15 @@ header h1 {
 }
 
 .sign-up-buttons button {
-  margin: 5px 10px;
+  margin: 5px 40px;
 }
 
 /* Email sign in button */
 
 .email-button {
-  padding: 20px;
   height: 60px;
   color: #540b51;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   background-color: white;
   border: solid white 0px;
@@ -114,7 +128,7 @@ header h1 {
   display: grid;
   align-items: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   background-color: #4285f4;
   border: solid #4285f4 0px;
@@ -129,17 +143,17 @@ header h1 {
   background-color: white;
   border: solid white 0px;
   border-radius: 5px;
-  height: 15px;
-  padding: 15px;
+  height: 25px;
+  padding: 10px;
 }
 
 /* Google sign in text */
 
 .google-button span {
+  width: max-content;
   grid-row: 1;
   grid-column: 2/3;
   text-align: left;
-  padding: 15px 0;
 }
 
 /* App preview image */
@@ -151,6 +165,12 @@ header h1 {
 
 .app-preview-image img {
   height: 670px;
+}
+
+/* Nav for trusted companies and team , how to work and move faster ivory background to avoid line between those sections */
+
+.ivory-background {
+  background-color: #f3eae2;
 }
 
 /* TRUSTED COMPANIES SECTION */
@@ -276,7 +296,6 @@ header h1 {
 }
 
 .meet-slack-button {
-  padding: 18px;
   height: 60px;
   color: white;
   font-size: 2rem;
@@ -287,7 +306,6 @@ header h1 {
 }
 
 .talk-sales-button {
-  padding: 18px;
   height: 60px;
   color: #540b51;
   font-size: 2rem;
@@ -359,7 +377,6 @@ header h1 {
 }
 
 .talk-to-sales-button {
-  padding: 18px;
   height: 60px;
   color: white;
   font-size: 2rem;
@@ -370,7 +387,6 @@ header h1 {
 }
 
 .try-for-free-button {
-  padding: 18px;
   height: 60px;
   color: #540b51;
   font-size: 2rem;
@@ -380,8 +396,697 @@ header h1 {
   border-radius: 5px;
 }
 
+/* FOOTER SECTION */
+
+footer {
+  margin: 30px 20px;
+}
+
+/* Slack logo icon */
+
+footer img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+/* Footer list configuration */
+
+footer ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 3;
+}
+
+/* Sitemap configuration */
+
+.sitemap-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.sitemap-flex li {
+  color: #454245;
+  font-weight: 300;
+}
+
+.sitemap-title {
+  color: black !important;
+  font-weight: 600 !important;
+}
+
+/* Footer line */
+
+hr {
+  margin: 30px 0;
+}
+
+/* Footer final list (Status, Privacy, Terms...) */
+
+.footer-final-list li {
+  font-weight: 600;
+}
+
+/* Region and Download icons setup */
+
+.footer-final-list-icon {
+  display: grid;
+  grid-auto-columns: min-content;
+  align-items: center;
+}
+
+.footer-final-list-icon img {
+  width: 20px;
+  margin: 0 10px 0 0;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.footer-final-list-icon span {
+  width: max-content;
+  grid-row: 1;
+  grid-column: 2;
+  text-align: left;
+}
+
+.download-slack {
+  color: #2e71a6;
+}
+
+/* Social media icons */
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Copyright disclaimer */
+
+.copyright {
+  color: #454245;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+/* MOBILE SCREENS RESPONSIVE DESIGN */
+
 @media (max-width: 767px) {
   .flex-nav-bar ul {
     display: none;
+  }
+
+  .nav-hidden-buttons {
+    display: none;
+  }
+}
+
+/* SMALL SCREENS RESPONSIVE DESIGN */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* NAV BAR */
+
+  .flex-nav-bar ul {
+    display: none;
+  }
+
+  .nav-hidden-buttons {
+    display: none;
+  }
+
+  /* HEADER */
+
+  header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  header h1 {
+    text-align: left;
+    background-image: url(../images/background-singup.png);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    padding-left: 40px !important;
+  }
+
+  .header-description {
+    text-align: left !important;
+    padding-left: 40px !important;
+  }
+
+  .app-preview-image {
+    overflow-y: hidden !important;
+    margin-left: auto !important;
+    text-align: right;
+  }
+
+  .app-preview-image img {
+    padding-left: 10px;
+    height: 350px;
+  }
+
+  /* TRUSTED COMPANIES SECTION */
+
+  .flex-companies-logos img {
+    height: 40px;
+  }
+
+  /* TEAM , HOW TO WORK AND MOVE FASTER SECTIONS */
+
+  .connectedness-image {
+    content: url(../images/connectedness.png);
+    width: 80%;
+  }
+
+  .flexibility-image {
+    content: url(../images/flexibility.png);
+    width: 80%;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .speed-image {
+    content: url(../images/speed.png);
+    width: 80%;
+  }
+
+  /* TEAMS RELY ON SLACK SECTION */
+
+  .teams-rely-on-slack {
+    margin: 30px 0;
+  }
+
+  .teams-rely-on-slack-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .meet-slack-button {
+    width: 50%;
+  }
+
+  .talk-sales-button {
+    width: 50%;
+  }
+
+  .teams-rely-on-slack ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .teams-rely-on-slack ul span {
+    padding: 0 20px;
+  }
+
+  .percentage-description {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: left;
+  }
+
+  .disclaimer {
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  /* WELCOME SECTION */
+
+  .welcome-buttons {
+    flex-direction: column-reverse;
+  }
+
+  /* FOOTER SECTION */
+
+  .footer-final-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media-icons {
+    width: 35%;
+    justify-content: space-between;
+  }
+}
+
+/* MEDIUM SCREENS RESPONSIVE DESIGN */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .nav-menu-icon {
+    display: none;
+  }
+
+  .flex-nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .flex-nav-bar ul li a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-bar-icons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .nav-hidden-buttons {
+    margin: auto 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .nav-hidden-buttons li a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+
+  .sign-in-nav-button a {
+    background-color: #540b51;
+    color: white;
+  }
+
+  .try-for-free-nav-button a {
+    color: #540b51;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* HEADER */
+
+  header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  header h1 {
+    text-align: left;
+    background-image: url(../images/background-singup.png);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    padding-left: 40px !important;
+  }
+
+  .header-description {
+    text-align: left !important;
+    padding-left: 40px !important;
+  }
+
+  .app-preview-image {
+    overflow-y: hidden !important;
+    margin-left: auto !important;
+    text-align: right;
+  }
+
+  .app-preview-image img {
+    padding-left: 10px;
+    height: 380px;
+  }
+
+  /* TRUSTED COMPANIES SECTION */
+
+  .flex-companies-logos img {
+    height: 45px;
+  }
+
+  /* TEAM , HOW TO WORK AND MOVE FASTER SECTIONS */
+
+  .features-sections {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    align-items: center;
+  }
+
+  .features-sections h2 {
+    margin-top: 0 !important;
+  }
+
+  .image-left-text-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+
+  .text-left-image-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 40px;
+  }
+
+  .connectedness-image {
+    content: url(../images/connectedness.png);
+    height: 250px;
+    align-self: center;
+    padding-right: 40px;
+  }
+
+  .flexibility-image {
+    content: url(../images/flexibility.png);
+    height: 250px;
+    align-self: center;
+    margin-left: auto;
+    padding-left: 40px;
+    text-align: right;
+  }
+
+  .speed-image {
+    content: url(../images/speed.png);
+    height: 250px;
+    align-self: center;
+    padding-right: 40px;
+  }
+
+  .features-sections-text-area {
+    width: 60%;
+  }
+
+  /* TEAMS RELY ON SLACK SECTION */
+
+  .teams-rely-on-slack {
+    margin: 30px 0;
+  }
+
+  .teams-rely-on-slack-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .meet-slack-button {
+    width: 45%;
+  }
+
+  .talk-sales-button {
+    width: 45%;
+  }
+
+  .teams-rely-on-slack ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .teams-rely-on-slack ul span {
+    padding: 0 20px;
+  }
+
+  .teams-rely-on-slack li {
+    width: 30%;
+  }
+
+  .percentage-description {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: left;
+  }
+
+  .disclaimer {
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  /* Section buttons */
+
+  .welcome-buttons {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .talk-to-sales-button {
+    width: 25%;
+  }
+
+  .try-for-free-button {
+    width: 25%;
+  }
+
+  /* FOOTER SECTION */
+
+  .footer-final-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media-icons {
+    width: 35%;
+    justify-content: space-between;
+  }
+}
+
+/* LARGE SCREENS RESPONSIVE DESIGN */
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 12px;
+  }
+
+  .nav-menu-icon {
+    display: none;
+  }
+
+  .flex-nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .flex-nav-bar ul li a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-bar-icons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .nav-hidden-buttons {
+    margin: auto 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .nav-hidden-buttons li a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+
+  .sign-in-nav-button a {
+    background-color: #540b51;
+    color: white;
+  }
+
+  .try-for-free-nav-button a {
+    color: #540b51;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* HEADER */
+
+  header {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  header h1 {
+    text-align: left;
+    padding-left: 80px !important;
+  }
+
+  .header-description {
+    text-align: left !important;
+    padding-left: 80px !important;
+  }
+
+  .sign-up-buttons {
+    padding-left: 80px !important;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .email-button {
+    width: 50%;
+    margin: 0 20px 0 0 !important;
+  }
+
+  .google-button {
+    width: 50%;
+    margin: 0 !important;
+  }
+
+  .app-preview-image {
+    margin-left: 20px !important;
+    margin-right: 80px;
+    width: 70%;
+    height: 300px;
+    text-align: right;
+  }
+
+  .app-preview-image img {
+    padding-left: 10px;
+    height: 380px;
+  }
+
+  /* TRUSTED COMPANIES SECTION */
+
+  .flex-companies-logos {
+    justify-content: space-around;
+  }
+
+  /* TEAM , HOW TO WORK AND MOVE FASTER SECTIONS */
+
+  .features-sections {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    align-items: center;
+  }
+
+  .features-sections h2 {
+    margin-top: 0 !important;
+  }
+
+  .image-left-text-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+
+  .text-left-image-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 40px;
+  }
+
+  .connectedness-image {
+    content: url(../images/connectedness.png);
+    height: 350px;
+    align-self: center;
+    padding-right: 40px;
+  }
+
+  .flexibility-image {
+    content: url(../images/flexibility.png);
+    height: 350px;
+    align-self: center;
+    margin-left: auto;
+    padding-left: 40px;
+    text-align: right;
+  }
+
+  .speed-image {
+    content: url(../images/speed.png);
+    height: 350px;
+    align-self: center;
+    padding-right: 40px;
+  }
+
+  .features-sections-text-area {
+    width: 60%;
+  }
+
+  /* TEAMS RELY ON SLACK SECTION */
+
+  .teams-rely-on-slack {
+    margin: 30px 0;
+  }
+
+  .teams-rely-on-slack-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .meet-slack-button {
+    width: 30%;
+  }
+
+  .talk-sales-button {
+    width: 30%;
+  }
+
+  .teams-rely-on-slack ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .teams-rely-on-slack ul span {
+    padding: 0 20px;
+  }
+
+  .teams-rely-on-slack li {
+    width: 20%;
+  }
+
+  .percentage-description {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: left;
+  }
+
+  .disclaimer {
+    text-align: left;
+    padding: 0 40px;
+  }
+
+  /* Section buttons */
+
+  .welcome-buttons {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .talk-to-sales-button {
+    width: 25%;
+  }
+
+  .try-for-free-button {
+    width: 25%;
+  }
+
+  /* FOOTER SECTION */
+
+  .footer-final-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media-icons {
+    width: 35%;
+    justify-content: space-between;
   }
 }
